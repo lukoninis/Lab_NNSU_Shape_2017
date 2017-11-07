@@ -3,11 +3,11 @@
 
 #include "circle.h"
 
-Circle::Circle( double radius ):
+Circle::Circle( double _radius ):
     Shape( std::move( std::string{ "circle" } ) ),
-    m_radius( radius )
+    m_radius( _radius )
 {
-    if( radius <=0 )
+    if( _radius <=0 )
         throw std::invalid_argument( "Circle: radius must be greater than zero" );
 }
 

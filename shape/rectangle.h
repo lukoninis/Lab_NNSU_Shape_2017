@@ -10,7 +10,7 @@ private:
     double m_weight{0};
 
 public:
-    explicit Rectangle( double height, double weight );
+    explicit Rectangle( double _height, double _weight );
     Rectangle( const Rectangle& ) = default;
     Rectangle( Rectangle&& ) = default;
 

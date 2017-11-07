@@ -6,9 +6,9 @@
 class Shape
 {
 protected:
-    std::string m_name;
+    const std::string m_name;
 public:
-    explicit Shape( std::string&& name ):m_name( std::move( name ) ){}
+    explicit Shape( std::string&& _name ): m_name( std::move( _name ) ) {}
     virtual ~Shape() = default; // виртуальный деструктор
 
     std::string name() const noexcept { return m_name; }

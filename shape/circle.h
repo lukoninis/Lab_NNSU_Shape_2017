@@ -9,7 +9,7 @@ private:
     double m_radius;
 
 public:
-    explicit Circle( double radius );
+    explicit Circle( double _radius );
     Circle( const Circle& ) = default;
     Circle( Circle&& ) = default;
 

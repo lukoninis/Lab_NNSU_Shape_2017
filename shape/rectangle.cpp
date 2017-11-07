@@ -2,10 +2,10 @@
 
 #include "rectangle.h"
 
-Rectangle::Rectangle( double height, double weight ):
+Rectangle::Rectangle( double _height, double _weight ):
     Shape( std::move( std::string{"rectangle"} ) ),
-    m_height( height ),
-    m_weight( weight )
+    m_height( _height ),
+    m_weight( _weight )
 {
     if( m_height <= 0 || m_weight <= 0 )
         throw std::invalid_argument( "Rectangle: height and weight must be greater than zero" );

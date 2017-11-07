@@ -27,10 +27,13 @@ int main( int argc, char const *argv[] )
 
   auto print_shape = []( auto *shape )
   {
-      std::cout << shape->name() << ": { "
-                << shape->area() << ", "
-                << shape->perimeter() << " }"
-                << std::endl;
+      if( shape != nulptr )
+      {
+          std::cout << shape->name() << ": { "
+                    << shape->area() << ", "
+                    << shape->perimeter() << " }"
+                    << std::endl;
+      }
       return;
   };
 

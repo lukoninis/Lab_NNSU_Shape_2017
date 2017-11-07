@@ -5,8 +5,9 @@
 
 class Shape
 {
-protected:
+private:
     const std::string m_name;
+
 public:
     explicit Shape( std::string&& _name ): m_name( std::move( _name ) ) {}
     virtual ~Shape() = default; // виртуальный деструктор

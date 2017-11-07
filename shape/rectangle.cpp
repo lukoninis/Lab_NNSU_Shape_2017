@@ -3,16 +3,12 @@
 #include "rectangle.h"
 
 Rectangle::Rectangle( double height, double weight ):
+    Shape( std::move( std::string{"rectangle"} ) ),
     m_height( height ),
     m_weight( weight )
 {
     if( m_height <= 0 || m_weight <= 0 )
         throw std::invalid_argument( "Rectangle: height and weight must be greater than zero" );
-}
-
-std::string Rectangle::name() const noexcept
-{
-    return m_name;
 }
 
 double Rectangle::perimeter() const noexcept

@@ -5,10 +5,13 @@
 
 class Shape
 {
+protected:
+    std::string m_name;
 public:
+    explicit Shape( std::string&& name ):m_name( std::move( name ) ){}
     virtual ~Shape() = default; // виртуальный деструктор
 
-    virtual std::string name() const = 0;
+    std::string name() const noexcept { return m_name; }
     virtual double perimeter() const = 0;
     virtual double area() const = 0;
 };
